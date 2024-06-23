@@ -220,13 +220,16 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
+      url: "https://github.com/nvnetpd10",
     },
     {
       id: 2,
       img: "/twit.svg",
+      url: "https://x.com/NavneetTiwari27",
     },
     {
       id: 3,
       img: "/link.svg",
+      url: "https://www.linkedin.com/in/navneet-tiwari-9209a3218/",
     },
   ];
