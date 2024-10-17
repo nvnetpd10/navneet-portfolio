@@ -53,7 +53,7 @@ export const BentoGridItem = ({
   links?: { text: string; url: string }[]; // Links array type definition
 }) => {
   const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
+  const rightLists = ["VueJS", "NextJS", "GraphQL"];
 
   const [copied, setCopied] = useState(false);
 
