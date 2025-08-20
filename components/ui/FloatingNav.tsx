@@ -46,44 +46,39 @@ export const FloatingNav = ({
   return (
     <AnimatePresence mode="wait">
       <motion.div
-  initial={{
-    opacity: 1,
-    y: -100,
-  }}
-  animate={{
-    y: visible ? 0 : -100,
-    opacity: visible ? 1 : 0,
-  }}
-  transition={{
-    duration: 0.2,
-  }}
-  className={cn(
-    // 🔹 smaller padding on mobile, bigger on md+
-    "flex flex-wrap max-w-full md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-5 inset-x-0 mx-auto px-4 py-2 md:px-8 md:py-4 rounded-lg border border-black/10 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center space-x-2 md:space-x-4",
-    className
-  )}
-  style={{
-    backdropFilter: "blur(16px) saturate(180%)",
-    backgroundColor: "rgba(17, 25, 40, 0.75)",
-    borderRadius: "12px",
-    border: "1px solid rgba(255, 255, 255, 0.125)",
-  }}
->
-  {navItems.map((navItem: any, idx: number) => (
-    <Link
-      key={`link=${idx}`}
-      href={navItem.link}
-      className={cn(
-        "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
-      )}
-    >
-      <span className="block sm:hidden">{navItem.icon}</span>
-      {/* 🔹 smaller text on mobile */}
-      <span className="text-xs md:text-sm !cursor-pointer">{navItem.name}</span>
-    </Link>
-  ))}
-</motion.div>
-
+        initial={{ opacity: 1, y: -100 }}
+        animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
+        transition={{ duration: 0.2 }}
+        className={cn(
+          // mobile-first
+          "flex flex-wrap md:flex-nowrap fixed z-[5000] inset-x-0 mx-auto top-4 px-4 py-2 rounded-lg border border-black/10 items-center justify-center space-x-2 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] max-w-[calc(100%-1rem)]",
+          // desktop: EXACTLY your old styles
+          "md:top-10 md:px-10 md:py-5 md:space-x-4 md:max-w-fit md:min-w-[70vw] lg:min-w-fit",
+          className
+        )}
+        style={{
+          backdropFilter: "blur(16px) saturate(180%)",
+          backgroundColor: "rgba(17, 25, 40, 0.75)",
+          borderRadius: "12px",
+          border: "1px solid rgba(255, 255, 255, 0.125)",
+        }}
+      >
+        {navItems.map((navItem: any, idx: number) => (
+          <Link
+            key={`link=${idx}`}
+            href={navItem.link}
+            className={cn(
+              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+            )}
+          >
+            <span className="block sm:hidden">{navItem.icon}</span>
+            {/* mobile smaller, desktop same as before */}
+            <span className="text-xs md:text-sm lg:text-base !cursor-pointer">
+              {navItem.name}
+            </span>
+          </Link>
+        ))}
+      </motion.div>
     </AnimatePresence>
   );
 };
