@@ -34,7 +34,7 @@ const Footer = () => {
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Navneet Tiwari
+          Happy to see you here
         </p>
 
         <div className="flex  p-83 md:gap-3 gap-0">

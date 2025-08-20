@@ -1,9 +1,8 @@
- import { FaLocationArrow } from "react-icons/fa6";
-
+import { FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
- import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
   return (
@@ -44,7 +43,7 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-          The best error message is the one that never shows up.
+            The best error message is the one that never shows up.
           </p>
 
           {/**
@@ -61,11 +60,51 @@ const Hero = () => {
             Hi! I&apos;m Navneet Tiwari, a Software Developer from India.
           </p>
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-  <a href="https://github.com/nvnetpd10//" target="_blank" rel="noopener noreferrer" className="mx-2">GitHub</a> |
-  <a href="https://www.linkedin.com/in/navneet-tiwari-9209a3218/" target="_blank" rel="noopener noreferrer" className="mx-2">LinkedIn</a> |
-  <a href="https://x.com/NavneetTiwari27" target="_blank" rel="noopener noreferrer" className="mx-2">Twitter</a>
-</p>
-
+            <a
+              href="https://drive.google.com/file/d/1e9b82_XU90lJsQT43hvEFXHLV361mt_k/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-2"
+            >
+              Resume
+            </a>{" "}
+            |
+            <a
+              href="https://github.com/nvnetpd10//"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-2"
+            >
+              GitHub
+            </a>{" "}
+            |
+            <a
+              href="https://www.linkedin.com/in/navneet-tiwari-9209a3218/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-2"
+            >
+              LinkedIn
+            </a>{" "}
+            |
+            <a
+              href="https://x.com/NavneetTiwari27"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-2"
+            >
+              Twitter
+            </a>{" "}
+            |{" "}
+            <a
+              href="https://www.instagram.com/noabusefromtoday/?utm_source=ig_web_button_share_sheet"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-2"
+            >
+              Instagram
+            </a>
+          </p>
 
           <a href="#about">
             <MagicButton
